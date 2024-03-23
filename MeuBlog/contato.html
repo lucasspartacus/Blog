@@ -1,38 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contatos</title>
+    <title>Blog do Lucas</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @media (max-width: 450px){
+            main{
+               width: 500px;
+            }
+            aside{
+                text-align: center;
+                position: static;
+                margin: 15px;
+            }
+        }
+
+    </style>
 </head>
+
 <body>
     <!-- Cabeçalho -->
     <header>
+        
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="patrocinio.html">Patrocínio e Anúncios</a></li>
-                <li><a href="sobre.html">Sobre Mim</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
+            <img width="70" height="70" class="logo" src="img/logo.svg" alt="imagem em destaque">
+            <div class="menu">
+                <a href="index.html">Home</a>
+                <a href="patrocinio.html">Patrocínio e Anúncios</a>
+                <a href="sobre.html">Sobre Mim</a>
+                <a href="contato.html">Contato</a> 
+            </div>
         </nav>
     </header>
-    
-    <!-- Conteúdo do site -->
-    <main>
-        <h3>Contatos:</h3>
-        <ul>
-            <img width="110" height="200" src="img/imglucas.jpg" alt="foto lucas">
-            <li>Lucas Spartacus Vieira Caravalho</li>
-            <li>lucasspartacus@gmail.com</li>
-            <li>97134-1911</li>
-            <li>Belo horizonte, MG</li>
-            <li><a href="https://www.linkedin.com/in/lucas-spartacus/" target="_blank">Linkedin</a></li>
-        </ul>
 
+    <!-- Conteúdo do site -->
+    <main class="main-contato">
+        <div class="caixa-post">
+            <img width="120" height="120" class="tumbnail" src="img/img1.png" alt="imagem em destaque">
+            <h3 class="titulo">Postagem numero 1</h3>
+            <h4 class="subtitulo">
+                <span class="data">19/11/2001</span>
+                <span class="autor">Lucas Spartacus</span>
+                <span class="Categoria">[Categoria 2]</span>
+            </h4>
+            <p class="texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi suscipit corporis est iure
+                distinctio modi, atque fuga odit quasi dicta omnis veritatis enim. Commodi, vero.</p>
+        </div>
+
+        <div class="caixa-post">
+            <img width="120" height="120" class="tumbnail" src="img/img2.png" alt="imagem em destaque">
+            <h3 class="titulo">Postagem numero 2</h3>
+            <h4 class="subtitulo">
+                <span class="data">19/11/2002</span>
+                <span class="autor">Camilla</span>
+                <span class="Categoria">[Categoria 1]</span>
+            </h4>
+            <p class="texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi suscipit corporis est iure
+                distinctio modi, atque fuga odit quasi dicta omnis veritatis enim. Commodi, vero.</p>
+        </div>
+
+        <div class="caixa-post">
+            <img width="120" height="120" class="tumbnail" src="img/img3.png" alt="imagem em destaque">
+            <h3 class="titulo">Postagem numero 3</h3>
+            <h4 class="subtitulo">
+                <span class="data">11/02/2023</span>
+                <span class="autor">Laura</span>
+                <span class="Categoria">[Categoria 3]</span>
+            </h4>
+            <p class="texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi suscipit corporis est iure
+                distinctio modi, atque fuga odit quasi dicta omnis veritatis enim. Commodi, vero.</p>
+        </div>
+        
     </main>
-    
+
     <!-- Barra lateral -->
-    <aside></aside>
+    <aside class="aside-contato">
+        <div class="ciaxa-busca">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+            </svg>
+            <h3>Pesquisa</h3>
+            <input type="text" class="texto_pesquisa">
+            <button class="button_ok">OK</button>
+        </div>
+
+        <div>
+            <h3>Categorias</h3>
+            <ul>
+                <li><a href="#"></a>Categoria 1</li>
+                <li><a href="#"></a>Categoria 2</li>
+                <li><a href="#"></a>Categoria 3</li>
+                <li><a href="#"></a>Categoria 4</li>
+            </ul>
+        </div>
+    </aside>
 </body>
+
 </html>
