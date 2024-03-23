@@ -6,25 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog do Lucas</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        @media (max-width: 450px){
+            .categorias{
+                visibility: hidden;
+            }
+            .wrapper{
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                grid-template-areas: "cabecalho" 
+                                     "conteudo"
+                                     "periferico";
+                grid-gap: 5px 0px;
+            }
+            aside.aside-index{
+                top: 76px;
+                height: 20px;
+                left: 50px;          
+                margin-top: 10px;    
+            }
+            aside.aside-right{
+                visibility: hidden;   
+            }
+            main.main-index{
+                left: 10px;
+                top: 97px;
+                margin-top: 10px;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <div class="wrapper">
     <!-- Cabeçalho -->
-    <header>
-        
-        <nav>
-            <img width="70" height="70" class="logo" src="img/logo.svg" alt="imagem em destaque">
-            <div class="menu">
-                <a href="index.html">Home</a>
-                <a href="patrocinio.html">Patrocínio e Anúncios</a>
+    <header  class="navbar navbar-default navbar-fixed-top " id="top" role="banner"> 
+      <!-- Navbar content -->
+        <nav class="index-nav">
+             
+                <div class="logo">
+                    <a href="index.html"><img width="45" height="45" class="logo" src="img/logo.svg" alt="imagem em destaque"></a>
+                </div>
+                <a href="patrocinio.html">Patrocínio</a>
                 <a href="sobre.html">Sobre Mim</a>
-                <a href="contato.html">Contato</a> 
-            </div>
+                <a href="contato.html">Contato</a>
+                <a href="">Entrar</a>
         </nav>
     </header>
 
     <!-- Conteúdo do site -->
-    <main>
+    <main class="main-index">
         <div class="caixa-post">
             <img width="120" height="120" class="tumbnail" src="img/img1.png" alt="imagem em destaque">
             <h3 class="titulo">Postagem numero 1</h3>
@@ -34,7 +66,7 @@
                 <span class="Categoria">[Categoria 2]</span>
             </h4>
             <p class="texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi suscipit corporis est iure
-                distinctio modi, atque fuga odit quasi dicta omnis veritatis enim. Commodi, vero.</p>
+                distinctio modi, atque fuga odit quasi dicta omnis veritatis enim. Commodi, vero. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae dolore esse error voluptatem rerum minima reprehenderit unde fugiat nesciunt voluptate ipsum, sapiente eveniet tempore temporibus hic illum? Ipsum, praesentium maiores?</p>
         </div>
 
         <div class="caixa-post">
@@ -46,7 +78,7 @@
                 <span class="Categoria">[Categoria 1]</span>
             </h4>
             <p class="texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi suscipit corporis est iure
-                distinctio modi, atque fuga odit quasi dicta omnis veritatis enim. Commodi, vero.</p>
+                distinctio modi, atque fuga odit quasi dicta omnis veritatis enim. Commodi, vero. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eius iusto ea sunt soluta cum culpa quasi nostrum dolor provident sapiente impedit, quidem, necessitatibus vero, dolore dolorem consequatur eum voluptas?</p>
         </div>
 
         <div class="caixa-post">
@@ -58,24 +90,19 @@
                 <span class="Categoria">[Categoria 3]</span>
             </h4>
             <p class="texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi suscipit corporis est iure
-                distinctio modi, atque fuga odit quasi dicta omnis veritatis enim. Commodi, vero.</p>
+                distinctio modi, atque fuga odit quasi dicta omnis veritatis enim. Commodi, vero. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque reiciendis eligendi possimus modi facilis natus repellendus vel perspiciatis minus, et doloremque. Ea excepturi culpa voluptates nisi dicta eius atque aut.</p>
         </div>
         
     </main>
 
     <!-- Barra lateral -->
-    <aside>
+    <aside class="aside-index">
         <div class="ciaxa-pesuisa">
 
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-            </svg>
-            <h3>Pesquisa</h3>
-            <input type="text" class="texto_pesquisa">
-            <button class="button_ok">OK</button>
+            <input type="text" class="texto_pesquisa" placeholder="Pesquisar">
+           
         </div>
-
-        <div>
+        <div class="categorias">
             <h3>Categorias</h3>
             <ul>
                 <li><a href="#"></a>Categoria 1</li>
@@ -85,6 +112,35 @@
             </ul>
         </div>
     </aside>
+    <aside class="aside-right">
+        <div class="categorias">
+            <h3>Categorias</h3>
+             <ul>
+                <a href="https://getbootstrap.com/docs/4.6/getting-started/introduction/#bundle">Èxemplo 1</a>
+                <a href="">Èxemplo 2</a>
+                <a href="">Èxemplo 3</a>
+                <a href="">Èxemplo 4</a>
+                <a href="">Èxemplo 5</a>
+            </ul>
+        </div>
+    </aside>
+
+     <!-- Form login -->
+     <!--<form action="/auth" method="post">
+        <div id="signin" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+            <div class="form-group">
+                <label for="login">Nome de usúario</label>
+                <input type="text" class="form-control" id="usuario" name="usuario">
+            </div>
+            <div class="form-group">
+                <label for="login">Senha</label>
+                <input type="text" class="form-control" id="senha" name="senha">
+            </div>
+            <button type="submit" class="btn btn-primary">Entrar</button>
+        </div>
+     </form>-->
+    </div>
 </body>
 
 </html>
