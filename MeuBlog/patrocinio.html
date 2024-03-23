@@ -1,27 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patrocinios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog do Lucas</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @media (max-width: 450px){
+            main{
+              width: 500px;
+            }
+            .caixa-noticia{
+               width: 50%;
+            }
+            p{
+                padding-left: 10px;
+            }
+        }
+
+    </style>
 </head>
+
 <body>
     <!-- Cabeçalho -->
     <header>
+        
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="patrocinio.html">Patrocínio e Anúncios</a></li>
-                <li><a href="sobre.html">Sobre Mim</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
+            <img width="70" height="70" class="logo" src="img/logo.svg" alt="imagem em destaque">
+            <div class="menu">
+                <a href="index.html">Home</a>
+                <a href="patrocinio.html">Patrocínio e Anúncios</a>
+                <a href="sobre.html">Sobre Mim</a>
+                <a href="contato.html">Contato</a> 
+            </div>
         </nav>
     </header>
-    
+
     <!-- Conteúdo do site -->
-    <main></main>
+    <main class="main-index">
+        <div class="container">
+            <div class="caixa-noticia">
+                <img width="120" height="120" class="tumbnail" src="img/img1.png" alt="imagem em destaque">
+                <h3 class="titulo">Postagem numero 1</h3>
+                <h4 class="subtitulo">
+                    <span class="data">19/11/2001</span>
+                    <span class="autor">Lucas Spartacus</span>
+                    <span class="Categoria">[Categoria 2]</span>
+                </h4>
+                <p class="texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi suscipit corporis est iure
+                    distinctio modi, atque fuga odit quasi dicta omnis veritatis enim. Commodi, vero.</p>
+            </div>
     
+            <div class="caixa-noticia">
+                <img width="120" height="120" class="tumbnail" src="img/img2.png" alt="imagem em destaque">
+                <h3 class="titulo">Postagem numero 2</h3>
+                <h4 class="subtitulo">
+                    <span class="data">19/11/2002</span>
+                    <span class="autor">Camilla</span>
+                    <span class="Categoria">[Categoria 1]</span>
+                </h4>
+                <p class="texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi suscipit corporis est iure
+                    distinctio modi, atque fuga odit quasi dicta omnis veritatis enim. Commodi, vero.</p>
+            </div>
+    
+            <div class="caixa-noticia">
+                <img width="120" height="120" class="tumbnail" src="img/img3.png" alt="imagem em destaque">
+                <h3 class="titulo">Postagem numero 3</h3>
+                <h4 class="subtitulo">
+                    <span class="data">11/02/2023</span>
+                    <span class="autor">Laura</span>
+                    <span class="Categoria">[Categoria 3]</span>
+                </h4>
+                <p class="texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi suscipit corporis est iure
+                    distinctio modi, atque fuga odit quasi dicta omnis veritatis enim. Commodi, vero.</p>
+            </div>
+        </div>
+        
+        
+    </main>
+
     <!-- Barra lateral -->
-    <aside></aside>
 </body>
+
 </html>
