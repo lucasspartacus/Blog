@@ -1,18 +1,18 @@
 body{
 
-    background-color: blueviolet;
+    background-color: whitesmoke;
+    overflow: auto;
 }
 
-.menu{ 
+
+nav.index-nav{
+
+    position: fixed; 
+    width: 100%; 
+    height: 50px; 
+    top: 0;
     background-color: lightpink;
-    border-radius: 10px;
-    margin: 10px;
-    margin-top: 20px;
-}
-nav{
-
-    margin: 15px;
-    width: 1535px;
+    padding-top: 20px;
     overflow: auto;
 }
 
@@ -20,31 +20,85 @@ nav{
     float: left;
 }
 
-a{
-    color: black;
-    font-size: 20px;
-    padding: 20px;
+.aside-index{
+
+    background-color: whitesmoke;
+    position: fixed;
+    width: 10%;
+    height: 1000px;
+    margin-top: 10px;
+    /* animation: mymove 5s;*/
+    float: left;
+    grid-area: cabecalho;
+    top: 65px;
+
 }
 
-aside{
+aside.aside-right{
+
+    background-color: whitesmoke;
+    position: fixed;
+    right: 170px;
+    width: 7%;
+    height: 1000px;
+    margin-top: 10px;
+    float: right;
+    grid-area: cabecalho;
+    top: 65px;
+
+}
+.aside-contato{
     height: 240px;
     background-color: lightpink;
     position: fixed;
-    right: 50px;
     top: 103px;
     width: 200px;
     border-radius: 10px ;
+    /* animation: mymove 5s;*/
+    float: right;
 }
-
+/*
+@keyframes mymove {
+    from {top: 0px;}
+    to {top: 103px;}
+}
+*/
 h3{
     margin: 10px;
 }
-main{
+
+.main-index{
+    background-color: whitesmoke;
+    position: fixed;
+    margin: 6px;
+    left: 250px;
+    width: 70%;
+    grid-area: conteudo;
+    float: right;
+    top: 65px;
+    
+}
+
+
+.main-sobre{
+
+    background-color: whitesmoke;
+    position: fixed;
+    margin: 6px;
+    left: 250px;
+    width: 70%;
+
+    float: right;
+  
+}
+.main-contato{
     background-color: lightpink;
     border-radius: 10px;
     margin: 15px;
-    width: 80%;
+    width: 50%;
+    left: 300px;
 }
+
 .caixa-post{
     overflow: auto;
 }
@@ -62,4 +116,93 @@ padding-right: 8px;
 padding-left: 2px;
 
 }
+
+.caixa-noticia{
+    width: 32%;
+    display: inline-block;
+}
+
+a{
+    padding-bottom: 3px;
+    color: black;
+    font-size: 20px;
+    padding: 5px;
+}
+
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+
+div.logo{
+ margin-bottom: 25px;
+ margin-left: 5px;
+
+}
+
+/*----------------------Sohbre-------------------------*/
+
+header#top{
+
+    background-color: #212529;
+}
+
+.title-item{
+    color: blue;
+}
+
+.aside-sobre{
+
+    background-color: white;
+    position: fixed;
+    width: 10%;
+    height: 1000px;
+    margin-top: 15px;
+    left: 150px;
+    float: left;
+    grid-area: cabecalho;
+    top: 100px;
+
+}
+
+.main-sobre{
+    background-color:  white;
+    position: fixed;
+    margin: 15px;
+    left: 450px;
+    width: 70%;
+    grid-area: conteudo;
+    float: right;
+    top: 100px;
+    
+}
+
+.navbar-brand{
+    padding-right: 1780px;
+    padding-left: 135px;
+}
+
+#boxes-id{
+    margin: 10px;
+}
+
+.ul-categoria{
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+    color: blue;
+    border: 1px solid #ddd;
+    margin-top: 30px;
+}
+
+ul.ul-categoria li {
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.titulo-aside{
+    width: 20%;
+}
+
+
 
